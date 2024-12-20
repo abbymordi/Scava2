@@ -1,0 +1,193 @@
+/* General Styles for Balboa Hunt */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FDEEF4; /* Light pink background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hunt Container */
+.hunt-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#hunt-status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Location Card */
+.location {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure all locations are displayed */
+}
+
+.location h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.location img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* History Blurb */
+.location .history {
+    font-size: 1rem;
+    color: #444; /* Softer black for history */
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Riddle Section */
+.location .riddle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #444; /* Softer black for riddles */
+    margin: 15px 0;
+}
+
+/* Feedback Message */
+.feedback {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #444; /* Default color */
+    transition: opacity 0.2s ease-in-out; /* Smooth fade effect */
+}
+
+/* Input for Answers */
+.location input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #555;
+    box-shadow: none;
+}
+
+.location input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.location input:focus {
+    outline: 2px solid #FF6F61; /* Coral outline on focus */
+}
+
+/* Submit Button */
+.location button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.location button:hover {
+    background-color: #FF3B3B;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 100; /* Ensures it's always on top */
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #fff;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Dropdown Menu Active */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .location img {
+        max-width: 100%; /* Ensure images scale down properly on smaller screens */
+    }
+
+    .hunt-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .dropdown-menu {
+        width: 150px; /* Adjust dropdown menu width for small screens */
+    }
+}

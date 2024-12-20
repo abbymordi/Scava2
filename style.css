@@ -1,0 +1,600 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FDEEF4;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #4c59af;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Header Section */
+.site-header {
+    background-color: #FF6F61;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 15px; /* Space between slides */
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide {
+    min-width: 300px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Images */
+.carousel-slide img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.carousel-slide p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Login Section */
+.login {
+    margin-top: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.login p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.input-group input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button, .btn-primary, .home-button {
+    background-color: #FF6F61; /* Coral */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover, .btn-primary:hover, .home-button:hover {
+    background-color: #FF3B3B; /* Darker coral on hover */
+    color: white;
+}
+
+/* Home Button */
+.home-button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.home-button {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 60px; /* Adds spacing between the Home button and the banner */
+}
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Keeps the text readable on the image */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: white; /* Ensure the heading is white */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: white; /* Change paragraph text color to white */
+    margin-bottom: 20px;
+}
+
+
+/* Description Section */
+.description {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.description p {
+    color: #666;
+}
+
+/* Itinerary Section */
+.itinerary {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.itinerary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.itinerary li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-grid img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Booking Section */
+.pricing {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.pricing .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Reviews Section */
+.reviews {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.reviews-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.review-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+    min-width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-slide blockquote {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.review-slide p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.review-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.review-button.left {
+    left: 10px;
+}
+
+.review-button.right {
+    right: 10px;
+}
+
+.review-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+ 
+
+/* Checkout Container */
+.checkout-container {
+    background-color: #FFFFFF; /* White box */
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+}
+
+.checkout-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.checkout-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.checkout-container form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.checkout-container form label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.checkout-container form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid #000; /* Black outline */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    box-shadow: none; /* Remove inset shadow */
+}
+
+.checkout-container form input:focus {
+    outline: 2px solid #FF6F61; /* Optional: Coral outline when focused */
+}
+
+
+/* Button Styling */
+.checkout-container .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF6F61; /* Coral button color */
+    color: white; /* White text for the button */
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.checkout-container .btn-primary:hover {
+    background-color: #FF3B3B; /* Darker coral on hover */
+}
+
+/* Strong Text */
+.checkout-container p strong {
+    color: #000; /* Ensure the tour name stays black */
+}
+
+/* BALBOA HUNT*/
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FDEEF4; /* Light pink background */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.hunt-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#hunt-status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.location {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block; /* This ensures all locations are displayed */
+}
+
+.location h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.location img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location p {
+    font-size: 1rem;
+    color: #000;
+}
+
+.location input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.location button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.location p {
+    color: #000; /* Black text for riddles */
+}
+
+.location button:hover {
+    background-color: #FF3B3B;
+}
+
+/* Style for the history blurb */
+.location .history {
+    font-size: 1rem;
+    color: #444; /* Softer black for history */
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Style for the riddle */
+.location .riddle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #444; /* Softer black for riddles */
+    margin: 15px 0;
+}
+/* Feedback Message */
+/* Feedback Message */
+.feedback {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #444; /* Default color */
+    transition: opacity 0.2s ease-in-out; /* Smooth fade effect */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 100; /* Ensures it's always on top */
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #fff;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Dropdown Menu Active */
+.dropdown-menu.show {
+    display: block;
+}

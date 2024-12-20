@@ -1,0 +1,175 @@
+/* General Styles for Home Page */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FDEEF4;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #4c59af;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Header Section */
+.site-header {
+    color: #333; /* Retain text color */
+    padding: 15px;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    background-color: transparent; /* Remove pink background */
+    box-shadow: none; /* Optional: Remove shadow if any */
+}
+
+
+/* Carousel Section */
+.carousel {
+    position: relative;
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide {
+    min-width: 300px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Ensure consistent height */
+}
+
+/* Carousel Images */
+.carousel-slide img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.carousel-slide p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Login Section */
+.login {
+    margin-top: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.login p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.input-group input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button, .btn-primary, .home-button {
+    background-color: #FF6F61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover, .btn-primary:hover, .home-button:hover {
+    background-color: #FF3B3B; /* Darker coral on hover */
+}
+
+/* General Section Spacing */
+section {
+    margin-bottom: 40px; /* Adjust this value to increase spacing */
+}
+
+.carousel-slide a {
+    text-decoration: none; /* Remove underline for links inside carousel slides */
+}

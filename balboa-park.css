@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FDEEF4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Description Section */
+.description {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.description p {
+    color: #666;
+}
+
+/* Itinerary Section */
+.itinerary {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.itinerary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.itinerary li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-grid img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Booking Section */
+.pricing {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.pricing .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Journey Map Section */
+.journey-map {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.journey-map h2 {
+    font-size: 1.8rem;
+    color: #000 !important; /* Force black text */
+    margin-bottom: 20px;
+}
+
+.journey-step {
+    display: flex;
+    flex-direction: column; /* Stack text and arrow vertically */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.journey-step p {
+    font-size: 1rem;
+    color: #000 !important; /* Force black text */
+    margin: 0;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: #000 !important; /* Ensure arrow is black */
+}
