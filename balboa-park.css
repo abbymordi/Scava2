@@ -41,6 +41,21 @@ body {
     margin-bottom: 20px;
 }
 
+.hero-text .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6F61;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text .btn-primary:hover {
+    background-color: #FF3B3B; /* Darker coral */
+}
+
 /* Description Section */
 .description {
     text-align: center;
@@ -153,4 +168,70 @@ body {
 .arrow {
     font-size: 1.5rem;
     color: #000 !important; /* Ensure arrow is black */
+}
+
+.reviews {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.reviews-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+    min-width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-slide blockquote {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.review-slide p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.review-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.review-button.left {
+    left: 10px;
+}
+
+.review-button.right {
+    right: 10px;
+}
+
+.review-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
