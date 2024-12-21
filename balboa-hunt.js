@@ -23,27 +23,22 @@ const stops = [
     }
 ];
 
-// Function to Render All Stops
+// Render Stops
 function renderStops() {
     const locationsContainer = document.getElementById("locations-container");
-
-    if (!locationsContainer) {
-        console.error("locations-container not found!");
-        return;
-    }
-
     locationsContainer.innerHTML = "";
 
     stops.forEach((stop, index) => {
         const stopElement = document.createElement("div");
         stopElement.classList.add("location");
+        if (index > 0) stopElement.classList.add("disabled"); // Initially disable all except the first
 
         stopElement.innerHTML = `
             <h2>${stop.name}</h2>
             <p class="history">${stop.history}</p>
-            <img src="${stop.image}" alt="${stop.name}" class="location-image">
+            <img src="${stop.image}" alt="${stop.name}">
             <p class="riddle">${stop.question}</p>
-            <input type="text" id="answer-${index}" placeholder="Type your answer here..." class="answer-box">
+            <input type="text" id="answer-${index}" placeholder="Type your answer here...">
             <button class="submit-btn" data-index="${index}">Submit Answer</button>
             <p id="feedback-${index}" class="feedback"></p>
         `;
@@ -51,34 +46,32 @@ function renderStops() {
         locationsContainer.appendChild(stopElement);
     });
 
-    const submitButtons = document.querySelectorAll(".submit-btn");
-    submitButtons.forEach((button) => {
+    document.querySelectorAll(".submit-btn").forEach(button => {
         button.addEventListener("click", validateAnswer);
     });
-
-    console.log("All locations rendered successfully!");
 }
 
-// Function to Validate Answers
+// Validate Answer
 function validateAnswer(event) {
-    const index = event.target.dataset.index;
+    const index = parseInt(event.target.dataset.index);
     const userInput = document.getElementById(`answer-${index}`).value.trim().toLowerCase();
-    const correctAnswers = stops[index].answers;
     const feedbackElement = document.getElementById(`feedback-${index}`);
 
-    if (correctAnswers.includes(userInput)) {
+    if (stops[index].answers.includes(userInput)) {
         feedbackElement.textContent = "Correct! 🎉";
         feedbackElement.style.color = "green";
-        feedbackElement.style.opacity = "1";
+
+        // Unlock the next location
+        const nextLocation = document.querySelectorAll(".location")[index + 1];
+        if (nextLocation) {
+            nextLocation.classList.remove("disabled");
+        }
     } else {
         feedbackElement.textContent = "Try again. ❌";
         feedbackElement.style.color = "red";
-        feedbackElement.style.opacity = "0";
-        setTimeout(() => {
-            feedbackElement.style.opacity = "1";
-        }, 200);
     }
 }
+
 
 // Hamburger Menu
 const hamburgerMenu = document.getElementById("hamburger-menu");
