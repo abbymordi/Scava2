@@ -36,14 +36,37 @@ h1 {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: block; /* Ensure all locations are displayed */
+    display: block;
+    position: relative; /* Enable positioning for overlay */
 }
 
-.location h2 {
-    font-size: 1.5rem;
-    color: #333;
+/* Locked/Disabled Location Styling */
+.location.disabled {
+    pointer-events: none; /* Disable interaction */
+    filter: blur(5px); /* Blur the content */
+    opacity: 0.5; /* Dim the entire card */
+    transition: filter 0.3s ease, opacity 0.3s ease; /* Smooth transition for effects */
 }
 
+/* Overlay Text for Locked Locations */
+.location.disabled::before {
+    content: "🔒 Solve the previous clue to unlock!";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    z-index: 1; /* Ensure the text is above the blurred content */
+    text-align: center;
+    width: 80%;
+    line-height: 1.5;
+}
+
+/* Image Styling */
 .location img {
     width: 100%;
     max-width: 500px;
@@ -51,6 +74,7 @@ h1 {
     margin: 10px 0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Ensure images maintain their aspect ratio */
 }
 
 /* History Blurb */
